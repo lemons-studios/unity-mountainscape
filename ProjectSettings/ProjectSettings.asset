@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Lemon Studio
+  companyName: Lemon Studios
   productName: Mountain Climb
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -923,11 +923,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 85032d26-2171-4f7e-b077-2efaa49431dc
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Mountain Climb
+  organizationId: shob3rs-lemon-studios
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
