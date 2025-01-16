@@ -24,14 +24,14 @@ public class GameServicesManager : MonoBehaviour
         }
     }
 
-    private async Task<bool> StartClientConnection(string joinCode)
+    public static async Task<bool> StartClientConnection(string joinCode)
     {
         var joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode: joinCode);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
         return !string.IsNullOrEmpty(joinCode) && NetworkManager.Singleton.StartClient();
     }
     
-    private async Task<string> StartHostRelay(int maxConnections = 4)
+    public static async Task<string> StartHostRelay(int maxConnections = 4)
     {
         Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(allocation, "dtls"));
