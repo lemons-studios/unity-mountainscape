@@ -36,6 +36,7 @@ public class GameServicesManager : MonoBehaviour
         Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(allocation, "dtls"));
         var joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+        Debug.Log(joinCode);
         return NetworkManager.Singleton.StartHost() ? joinCode : null;
     }
 }

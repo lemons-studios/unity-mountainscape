@@ -1,5 +1,8 @@
+using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UserUIManager : MonoBehaviour
 {
@@ -16,18 +19,11 @@ public class UserUIManager : MonoBehaviour
 
     private void CloseActiveMenu(InputAction.CallbackContext obj)
     {
-        GetActiveSubmenus()[0].SetActive(false);
+        
     }
 
     public void ToggleUI(GameObject ui)
     {
-        // Disable any active menus before the new ui gets toggled
-        var disabledSubmenu = GetActiveSubmenus()[0];
-        if (disabledSubmenu != ui)
-        {
-            disabledSubmenu.SetActive(false);
-        }
-        
         ui.SetActive(!ui.activeSelf);
     }
 
@@ -38,6 +34,29 @@ public class UserUIManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
         Application.Quit();
+    }
+
+    public void JoinGameHelper()
+    {
+        Task.Run(JoinGame);
+    }
+    
+    private async Task JoinGame()
+    {
+        Debug.Log("Triggered");
+        var joinCode = GameObject.FindGameObjectWithTag("JoinMenu").GetComponentInChildren<TMP_InputField>().text;
+        await GameServicesManager.StartClientConnection(joinCode);
+    }
+
+    public void StartHostingHelper()
+    {
+        Task.Run(StartHosting);
+    }
+    
+    private async Task StartHosting()
+    {
+        PlayerPrefs.SetString("currentJoinKey", await GameServicesManager.StartHostRelay());
+        SceneManager.LoadScene("Scenes/TheMountain/Main", LoadSceneMode.Single);
     }
     
     private GameObject[] GetActiveSubmenus()
