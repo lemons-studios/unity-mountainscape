@@ -254,7 +254,7 @@ MonoBehaviour:
     m_Value: 1
   shadowResolution:
     m_OverrideState: 1
-    m_Value: 512
+    m_Value: 1024
   shadowDistance:
     m_OverrideState: 1
     m_Value: 8000
@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Value: 0.95
   perceptualBlending:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   numPrimarySteps:
     m_OverrideState: 1
     m_Value: 32
@@ -315,14 +315,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   shadows:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0.14727542}
   midtones:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_OverrideState: 0
+    m_Value: {x: 0.7857471, y: 1, z: 0.8546811, w: 0.07363771}
   highlights:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.27801177}
+    m_OverrideState: 0
+    m_Value: {x: 0.9278635, y: 0.93488204, z: 1, w: 0.11600881}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
