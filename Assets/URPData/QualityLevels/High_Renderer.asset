@@ -30,7 +30,7 @@ MonoBehaviour:
   m_Settings:
     AOMethod: 0
     Downsample: 0
-    AfterOpaque: 0
+    AfterOpaque: 1
     Source: 0
     NormalSamples: 2
     Intensity: 3
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   material: {fileID: 2100000, guid: 3748131af20412e478461c6445c73923, type: 2}
-  renderingDebugger: 1
+  renderingDebugger: 0
   reflectionProbe: 1
   resolutionScale: 1
   upscaleMode: 0
@@ -158,4 +158,4 @@ MonoBehaviour:
   sunAttenuation: 1
   resetOnStart: 1
   outputDepth: 1
-  depthTexture: 1
+  depthTexture: 0
