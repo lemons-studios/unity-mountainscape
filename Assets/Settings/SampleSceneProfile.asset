@@ -195,13 +195,13 @@ MonoBehaviour:
     m_Value: 0.175
   scatteringTint:
     m_OverrideState: 1
-    m_Value: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    m_Value: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
   powderEffectIntensity:
     m_OverrideState: 1
     m_Value: 0.34
   multiScattering:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.98
   shadows:
     m_OverrideState: 1
     m_Value: 1
